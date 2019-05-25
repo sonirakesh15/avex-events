@@ -144,4 +144,5 @@ jQuery(document).ready(function ($) {
   })
 
   // custom code
+  $("a[title^='Hosted on free web hosting 000webhost.com.']").parent('div').html('');
 });
