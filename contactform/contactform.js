@@ -94,22 +94,18 @@ jQuery(document).ready(function($) {
     if( ! action ) {
       action = '/contactform/contactform.php';
     }
+    $('#formRegister').prop('disabled', true);
+    console.log('outside')
     $.ajax({
       type: "POST",
       url: action,
       data: str,
       success: function(msg) {
-        // alert(msg);
-        if (msg == 'OK') {
-          $("#sendmessage").addClass("show");
-          $("#errormessage").removeClass("show");
-          $('.contactForm').find("input, textarea").val("");
-        } else {
-          $("#sendmessage").removeClass("show");
-          $("#errormessage").addClass("show");
-          $('#errormessage').html(msg);
-        }
-
+        console.log('done')
+        $('#myModal').modal('hide');       
+      },error: function(err){
+        console.log('ERR',err)
+        $('#formRegister').prop('disabled', false);
       }
     });
     return false;

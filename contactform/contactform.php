@@ -11,6 +11,6 @@ if($_POST){
     $finalMsg= "Hospital Name : ".$hospital_name." State: ".$state." District: ".$district." Name: ".$person_name." MobileNo:".$mobileNo." Email: ".$email." Message: ".$message ;
 
 //send email
-    mail("rakesh.soni@venturepact.com", "This is an email from:" .$email, $finalMsg);
+    mail("ankitanand@live.com", "*AVEXEVENTS* This is an email from : " .$email, $finalMsg);
 }
 ?>

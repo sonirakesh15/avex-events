@@ -53,9 +53,10 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="#gallery">About Us</a></li>
           <li><a href="#about">Mission</a></li>
+          <li><a href="#subscribe">Vision</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#footer">About Us</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -70,22 +71,70 @@
       <p class="mb-6 pb-0">A Event Hub For Celebration Of Success</p>
       <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
         data-autoplay="true"></a> -->
-      <a href="#about" class="about-btn scrollto">About Our Mission</a>
+      <a href="#" data-toggle="modal" data-target="#myModal" class="about-btn scrollto">Register</a>
     </div>
   </section>
 
   <main id="main">
+    <section id="gallery" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>About Us</h2>
+          <p>
+            AVEX is purely an Event Management Company. AVEX strives to recognize the best individual or Organization
+            of the respective fields or Industry.
+            We, at AVEX do the ground level research by reaching out to the customers and choose the best
+            that are people’s choice and acknowledge them. AVEX is the voice of the India’s Businesses and Industries.
+          </p>
+        </div>
+      </div>
+      <div class="owl-carousel gallery-carousel">
+        <a href="img/gallery/1.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/1.jpg"
+            alt=""></a>
+        <a href="img/gallery/2.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/2.jpg"
+            alt=""></a>
+        <a href="img/gallery/3.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/3.jpg"
+            alt=""></a>
+        <a href="img/gallery/4.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/4.jpg"
+            alt=""></a>
+        <a href="img/gallery/5.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/5.jpg"
+            alt=""></a>
+        <a href="img/gallery/6.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/6.jpg"
+            alt=""></a>
+        <a href="img/gallery/7.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/7.jpg"
+            alt=""></a>
+        <a href="img/gallery/8.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/8.jpg"
+            alt=""></a>
+      </div>
+    </section>
 
     <!--==========================
-      About Section
+      Mission Section
     ============================-->
     <section id="about">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12">
-            <h2>About Our Mission</h2>
-            <p>To enchance efficience and competitiveness of Indian Industry and to reach 5 million membors by 2020</p>
+          <div class="col-lg-12 col-md-6">
+            <div class="section-header">
+              <h2>About Our Mission</h2>
+              <!-- <img src="img/logo.png" alt="TheEvenet"> -->
+              <p>To enchance efficience and competitiveness of Indian Industry and to reach 5 million membors by
+                2020</p>
+            </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==========================
+      Vision Section
+    ============================-->
+    <section id="subscribe">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h2>Our Vision</h2>
+          <p>To be the best in the industry and to acknowledge the best of the industry (or) sector (both public &
+            private).</p>
         </div>
       </div>
     </section>
@@ -94,14 +143,10 @@
       Contact Section
     ============================-->
     <section id="contact" class="section-bg wow fadeInUp">
-
       <div class="container">
-
         <div class="section-header">
           <h2>Contact Us</h2>
-          <p>Nihil officia ut sint molestiae tenetur.</p>
         </div>
-
         <div class="row contact-info">
           <div class="col-md-6">
             <div class="contact-phone">
@@ -115,77 +160,12 @@
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
+              <p><a href="mailto:contact@avexevents.in">contact@avexevents.in</a></p>
             </div>
           </div>
-
         </div>
-
-        <div class="form">
-          <div id="sendmessage">Your message has been sent. Thank you!</div>
-          <div id="errormessage"></div>
-          <form action="" method="post" role="form" class="contactForm" id="frmemail" >
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <input type="text" name="hospital_name" class="form-control" id="hospital_name"
-                  placeholder="Hospital Name" data-rule="required" data-msg="Hospital Name is Required" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group col-md-6">
-                <input type="text" class="form-control" name="state" id="state" placeholder="State"
-                  data-rule="required" data-msg="State  is Required" />
-                <div class="validation"></div>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <input type="text" name="district" class="form-control" id="district" placeholder="District"
-                  data-rule="required" data-msg="District is Required" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group col-md-6">
-                <input type="text" class="form-control" name="person_name" id="person_name"
-                  placeholder="Concern Person Name" data-rule="required" data-msg="Name is Required" />
-                <div class="validation"></div>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <input type="email" name="email" class="form-control" id="email" placeholder="Email" data-rule="email"
-                  data-msg="Please enter a valid email" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group col-md-6">
-                <input type="text" class="form-control" name="message" id="mobileNo" placeholder="Mobile No."
-                  data-rule="minlen:10" data-msg="Please enter valid contact number" />
-                <div class="validation"></div>
-              </div>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" name="message" rows="5" data-rule="required"
-                data-msg="Please write something for us" placeholder="Message"></textarea>
-              <div class="validation"></div>
-            </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
-          </form>
-        </div>
-
       </div>
     </section><!-- #contact -->
-
-    <!--==========================
-      Subscribe Section
-    ============================-->
-    <section id="subscribe">
-      <div class="container wow fadeInUp">
-        <div class="section-header">
-          <h2>Our Vision</h2>
-          <p>To be the best in the industry and to acknowledge the best of the industry (or) sector (both public &
-            private).</p>
-        </div>
-      </div>
-    </section>
-
   </main>
 
 
@@ -196,18 +176,10 @@
     <div class="footer-top">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 col-md-6 footer-info">
-            <h4>About Us</h4>
-            <!-- <img src="img/logo.png" alt="TheEvenet"> -->
-            <p>
-              AVEX is purely an Event Management Company. AVEX strives to recognize the best individual or Organization
-              of the respective fields or Industry.
-              We, at AVEX do the ground level research by reaching out to the customers and choose the best
-              that are people’s choice and acknowledge them. AVEX is the voice of the India’s Businesses and Industries.
-            </p>
+          <div class="col-lg-12 col-md-12 footer-info">
+            <button class="btn btn-danger btn-lg">Register</button>
           </div>
-        </div>
-        <!-- <div class="row">
+          <!-- <div class="row">
           <div class="col-lg-12 col-md-6 footer-contact">
             <div class="social-links">
               <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
@@ -218,6 +190,7 @@
             </div>
           </div>
         </div> -->
+        </div>
       </div>
     </div>
 
@@ -246,6 +219,79 @@
 
   <!-- Template Main Javascript File -->
   <script src="./js/main.js"></script>
+
+
+
+  <!-- Registeration modal  -->
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Registeration Form</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="form">
+            <div id="errormessage"></div>
+            <form action="" method="post" role="form" class="contactForm" id="frmemail">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" name="hospital_name" class="form-control" id="hospital_name"
+                    placeholder="Hospital Name" data-rule="required" data-msg="Hospital Name is Required" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" name="state" id="state" placeholder="State"
+                    data-rule="required" data-msg="State  is Required" />
+                  <div class="validation"></div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" name="district" class="form-control" id="district" placeholder="District"
+                    data-rule="required" data-msg="District is Required" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" name="person_name" id="person_name"
+                    placeholder="Concern Person Name" data-rule="required" data-msg="Name is Required" />
+                  <div class="validation"></div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="email" name="email" class="form-control" id="email" placeholder="Email" data-rule="email"
+                    data-msg="Please enter a valid email" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" name="message" id="mobileNo" placeholder="Mobile No."
+                    data-rule="minlen:10" data-msg="Please enter valid contact number" />
+                  <div class="validation"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required"
+                  data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validation"></div>
+              </div>
+              <div class="form-row col-md-12">
+                <div style="width:100%;"><button class="btn" id="formRegister" style="width:100%;background-color: #f82249;color: white"
+                    type="submit">Register</button></div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- <div class="modal-footer">
+          <button class="btn" type="submit" data-dismiss="modal">close</button>
+        </div> -->
+      </div>
+
+    </div>
+  </div>
 </body>
 
 </html>
