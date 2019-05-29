@@ -106,6 +106,7 @@ jQuery(document).ready(function($) {
       },error: function(err){
         console.log('ERR',err)
         $('#formRegister').prop('disabled', false);
+        $('#myModal').modal('hide');
       }
     });
     return false;
