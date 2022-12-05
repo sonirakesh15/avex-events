@@ -2,3 +2,7 @@
 	object = 9858a0472280abb15e31a2cc07084f0f91bb1dc0
 	subtree = path
 	type = extract tree
+[map "f4124352-e21a-3259-9288-2da1263364c1"]
+	object = 4c30ee2df946872d8e24b18ed1b6daa8b5887a2f
+	path = module
+	type = expand module
