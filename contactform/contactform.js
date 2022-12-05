@@ -1,21 +1,22 @@
 jQuery(document).ready(function ($) {
   "use strict";
-  let postCondition = 0;
+  let postCondition = 1;
 
   //Contact
-  $('form.contactForm').submit(function () {
-    var f = $(this).find('.form-group'),
+  $("form.contactForm").submit(function () {
+    var f = $(this).find(".form-group"),
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
 
-    f.children('input').each(function () { // run all inputs
+    f.children("input").each(function () {
+      // run all inputs
 
       var i = $(this); // current input
-      var rule = i.attr('data-rule');
+      var rule = i.attr("data-rule");
 
       if (rule !== undefined) {
         var ierror = false; // error flag for current input
-        var pos = rule.indexOf(':', 0);
+        var pos = rule.indexOf(":", 0);
         if (pos >= 0) {
           var exp = rule.substr(pos + 1, rule.length);
           rule = rule.substr(0, pos);
@@ -24,48 +25,57 @@ jQuery(document).ready(function ($) {
         }
 
         switch (rule) {
-          case 'required':
-            if (i.val() === '') {
+          case "required":
+            if (i.val() === "") {
               ferror = ierror = true;
             }
             break;
 
-          case 'minlen':
+          case "minlen":
             if (i.val().length < parseInt(exp)) {
               ferror = ierror = true;
             }
             break;
 
-          case 'email':
+          case "email":
             if (!emailExp.test(i.val())) {
               ferror = ierror = true;
             }
             break;
 
-          case 'checked':
-            if (!i.is(':checked')) {
+          case "checked":
+            if (!i.is(":checked")) {
               ferror = ierror = true;
             }
             break;
 
-          case 'regexp':
+          case "regexp":
             exp = new RegExp(exp);
             if (!exp.test(i.val())) {
               ferror = ierror = true;
             }
             break;
         }
-        i.next('.validation').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+        i.next(".validation")
+          .html(
+            ierror
+              ? i.attr("data-msg") !== undefined
+                ? i.attr("data-msg")
+                : "wrong Input"
+              : ""
+          )
+          .show("blind");
       }
     });
-    f.children('textarea').each(function () { // run all inputs
+    f.children("textarea").each(function () {
+      // run all inputs
 
       var i = $(this); // current input
-      var rule = i.attr('data-rule');
+      var rule = i.attr("data-rule");
 
       if (rule !== undefined) {
         var ierror = false; // error flag for current input
-        var pos = rule.indexOf(':', 0);
+        var pos = rule.indexOf(":", 0);
         if (pos >= 0) {
           var exp = rule.substr(pos + 1, rule.length);
           rule = rule.substr(0, pos);
@@ -74,48 +84,56 @@ jQuery(document).ready(function ($) {
         }
 
         switch (rule) {
-          case 'required':
-            if (i.val() === '') {
+          case "required":
+            if (i.val() === "") {
               ferror = ierror = true;
             }
             break;
 
-          case 'minlen':
+          case "minlen":
             if (i.val().length < parseInt(exp)) {
               ferror = ierror = true;
             }
             break;
         }
-        i.next('.validation').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+        i.next(".validation")
+          .html(
+            ierror
+              ? i.attr("data-msg") != undefined
+                ? i.attr("data-msg")
+                : "wrong Input"
+              : ""
+          )
+          .show("blind");
       }
     });
     if (ferror) return false;
     else var str = $(this).serialize();
-    var action = $(this).attr('action');
+    var action = $(this).attr("action");
     if (!action) {
-      action = '/contactform/contactform.php';
+      action = "/contactform/contactform.php";
     }
-    $('#formRegister').prop('disabled', true);
-    console.log('outside')
+    $("#formRegister").prop("disabled", true);
+    console.log("outside");
     if (!postCondition) {
       $.ajax({
         type: "POST",
         url: action,
         data: str,
         success: function (msg) {
-          console.log('done');
-          $('#myModal').modal('hide');
-          $('form.contactForm').trigger("reset");
-          $('#formRegister').text('Already Registered :)');
+          console.log("done");
+          $("#myModal").modal("hide");
+          $("form.contactForm").trigger("reset");
+          $("#formRegister").text("Already Registered :)");
           postCondition = 1;
-        }, error: function (err) {
-          console.log('ERR', err);
-          $('#formRegister').prop('disabled', false);
-          $('#myModal').modal('hide');
-        }
+        },
+        error: function (err) {
+          console.log("ERR", err);
+          $("#formRegister").prop("disabled", false);
+          $("#myModal").modal("hide");
+        },
       });
     }
     return false;
   });
-
 });
